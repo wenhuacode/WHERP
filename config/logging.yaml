@@ -1,0 +1,71 @@
+version: 1
+
+loggers:
+  root:
+    level: INFO
+    handlers: [console]
+  tornado:
+    level: INFO
+    handlers: [console,log]
+    propagate: no
+  tornado.access:
+    level: INFO
+    handlers: [console, access]
+    propagate: no
+  tornado.application:
+    level: INFO
+    handlers: [ console, application ]
+    propagate: no
+  tornado.general:
+    level: INFO
+    handlers: [ console, general ]
+    propagate: no
+  log:
+    level: INFO
+    handlers: [console,log]
+    propagate: no
+
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(lineno)d - %(levelname)s - %(message)s'
+  timedRotating:
+    format: '%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(lineno)d - %(levelname)s - %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple
+  access:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: 'logs/access.log'
+    when: 'midnight'
+    interval: 1
+    backupCount: 180
+  application:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: 'logs/application.log'
+    when: 'midnight'
+    interval: 1
+    backupCount: 180
+  general:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: 'logs/general.log'
+    when: 'midnight'
+    interval: 1
+    backupCount: 180
+  log:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: INFO
+    formatter: timedRotating
+    filename: 'logs/log.log'
+    when: 'D'
+    interval: 1
+    backupCount: 180
+    encoding: 'utf8'
