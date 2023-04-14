@@ -1,5 +1,5 @@
-from WHERP.handler import RedisHandler
-from WHERP.settings import database
+from wherp.handler import RedisHandler
+from wherp.settings import database
 from apps.utils.mxform_decorators import authenticated_async
 from apps.product.product_handler.models import Product
 from apps.utils.OutInventoryCheck import OutInventoryCheck

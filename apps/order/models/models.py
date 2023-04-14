@@ -1,5 +1,5 @@
 from peewee import *
-from WHERP.models import BaseModel
+from wherp.models import BaseModel
 
 from apps.inventory_management.inventory_distribution_cost.models import StorehouseManagement
 from apps.customer.customer_handler.models import Customer
@@ -23,6 +23,7 @@ class OrderIndex(BaseModel):
     employee_id = IntegerField(verbose_name="经手人id", null=True)
     signed_data = DateField(verbose_name="签订日期", formats='%Y-%m-%d', null=True)
     order_state = IntegerField(default=1, verbose_name="订单状态", null=True)
+    is_push_jst = BooleanField(choices=IS_FREE_GIFT, default=False, verbose_name="是否推送聚水潭", null=True)
     order_qty = IntegerField(verbose_name="销售数量", null=True)
     total_sales_amount = DecimalField(default=0, max_digits=18, decimal_places=4, verbose_name="销售总金额", null=True)
     order_discount = FloatField(verbose_name="折扣", null=True)

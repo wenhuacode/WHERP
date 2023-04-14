@@ -1,7 +1,7 @@
 import json
 
-from WHERP.settings import OP_MAP, pw
-from WHERP.settings import objects
+from wherp.settings import OP_MAP, pw
+from wherp.settings import objects
 
 
 class Filter:

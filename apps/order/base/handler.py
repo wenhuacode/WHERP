@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 
 from peewee import fn
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.finance.accounting_subject.models import AccountingSubject
 

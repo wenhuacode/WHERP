@@ -2,7 +2,7 @@ from peewee import SQL
 from apps.order.models.models import OrderDetailAccount
 from apps.customer.customer_handler.models import CustomerClassify
 from apps.product.product_handler.models import ProductClassify
-from WHERP.settings import objects
+from wherp.settings import objects
 
 
 async def Conditional(param, order_type: list):

@@ -2,8 +2,8 @@ import copy
 import json
 from datetime import datetime
 
-from WHERP.handler import RedisHandler
-from WHERP.settings import database
+from wherp.handler import RedisHandler
+from wherp.settings import database
 from apps.admin.role.models import *
 from apps.admin.role.forms import *
 from apps.admin.menu.models import Menu

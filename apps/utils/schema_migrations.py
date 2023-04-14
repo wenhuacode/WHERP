@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from playhouse.migrate import *
-from WHERP.settings import database
+from wherp.settings import database
 
 database.set_allow_sync(True)
 

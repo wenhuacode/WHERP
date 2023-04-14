@@ -1,6 +1,6 @@
 import json
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.product.product_handler.models import Product, ProductClassify
 from apps.order.models.models import OrderIndex, OrderDetail, OrderDetailAccount
@@ -9,7 +9,7 @@ from apps.customer.customer_handler.models import Customer, CustomerClassify
 from peewee import JOIN, fn, Case, SQL
 from apps.utils.util_func import json_serial
 from apps.utils.query_conditional import Conditional
-from WHERP.settings import objects
+from wherp.settings import objects
 
 
 # 库存查询

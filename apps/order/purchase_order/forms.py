@@ -13,6 +13,7 @@ class CreateOrderForm(Form):
     employee_id = IntegerField("经手人ID", validators=[DataRequired(message="请输入经手人")])
     employee = StringField("经手人", validators=[DataRequired(message="请输入经手人")])
     signed_data = DateField('订单日期', validators=[DataRequired(message='订单日期')])
+    is_push_jst = StringField('是否推送聚水潭', validators=[DataRequired(message='请选择是否推送聚水潭')])
     total_sales_amount = StringField('产品合计金额', validators=[DataRequired(message="产品合计金额出错")])
     order_discount = StringField('整单折扣率', validators=[DataRequired(message="整单折扣率出错")])
     order_qty = IntegerField("数量", validators=[DataRequired(message="产品数量")])

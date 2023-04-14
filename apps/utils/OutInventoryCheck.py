@@ -6,7 +6,7 @@ from peewee import *
 from apps.utils.Error import InventoryError
 from apps.order.models.models import OrderDetailAccount, OrderDetail, SubsidiaryLedger
 from apps.inventory_management.inventory_distribution_cost.models import IrProperty, StorehouseManagement
-from WHERP.settings import objects
+from wherp.settings import objects
 from playhouse.shortcuts import model_to_dict
 
 class OutInventoryCheck:

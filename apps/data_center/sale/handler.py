@@ -1,6 +1,6 @@
 import json
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.product.product_handler.models import Product, ProductClassify
 from apps.order.models.models import OrderIndex, OrderDetail, OrderDetailAccount

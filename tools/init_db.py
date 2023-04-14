@@ -1,6 +1,6 @@
 from apps.inventory_management.inventory_distribution_cost.models import *
-from WHERP.settings import database
-from WHERP.settings import settings
+from wherp.settings import database
+from wherp.settings import settings
 
 database.set_allow_sync(True)
 database = MySQLDatabase(
@@ -86,6 +86,58 @@ def insert():
         {'name': '应付减少单', 'num_ber_head': settings['company']['init_name'] + 'YFJS'},
         {'name': '资金调整单', 'num_ber_head': settings['company']['init_name'] + 'ZJTZ'},
     ]
+
+    # order_as_contact = [
+    #     # 销售单
+    #     {'as_id': 36, 'order_id': 1, 'adjust_type': 2},
+    #     {'as_id': 27, 'order_id': 1, 'adjust_type': 1},
+    #     {'as_id': 13, 'order_id': 1, 'adjust_type': 1},
+    #     {'as_id': 38, 'order_id': 1, 'adjust_type': 1},
+    #     # 销售退货单
+    #     {'as_id': 36, 'order_id': 2, 'adjust_type': 1},
+    #     {'as_id': 27, 'order_id': 2, 'adjust_type': 2},
+    #     {'as_id': 13, 'order_id': 2, 'adjust_type': 2},
+    #     {'as_id': 38, 'order_id': 2, 'adjust_type': 2},
+    #     # 采购单
+    #     {'as_id': 36, 'order_id': 3, 'adjust_type': 1},
+    #     {'as_id': 47, 'order_id': 3, 'adjust_type': 1},
+    #     # 采购退货单
+    #     {'as_id': 36, 'order_id': 4, 'adjust_type': 1},
+    #     {'as_id': 47, 'order_id': 4, 'adjust_type': 1},
+    #     {'as_id': 57, 'order_id': 4, 'adjust_type': 3},
+    #     # 报损单
+    #     {'as_id': 36, 'order_id': 5, 'adjust_type': 2},
+    #     {'as_id': 17, 'order_id': 5, 'adjust_type': 1},
+    #     # 报溢单
+    #     {'as_id': 36, 'order_id': 6, 'adjust_type': 1},
+    #     {'as_id': 54, 'order_id': 6, 'adjust_type': 1},
+    #     # 其他出库单
+    #     {'as_id': 36, 'order_id': 7, 'adjust_type': 2},
+    #     {'as_id': 18, 'order_id': 7, 'adjust_type': 1},
+    #     # 其他入库单
+    #     {'as_id': 36, 'order_id': 8, 'adjust_type': 1},
+    #     {'as_id': 55, 'order_id': 8, 'adjust_type': 1},
+    #     # 调拨单
+    #     {'as_id': 36, 'order_id': 9, 'adj ust_type': 1},
+    #     {'as_id': 36, 'order_id': 9, 'adjust_type': 2},
+    #     # 成本调整单
+    #     {'as_id': 36, 'order_id': 10, 'adjust_type': 1},
+    #     {'as_id': 36, 'order_id': 10, 'adjust_type': 2},
+    #     {'as_id': 56, 'order_id': 10, 'adjust_type': 3},
+    #
+    #     # 收款单
+    #     {'as_id': 38, 'order_id': 11, 'adjust_type': 2},
+    #     # 付款单
+    #     {'as_id': 47, 'order_id': 12, 'adjust_type': 1},
+    #     # 一般费用单
+    #     {'as_id': 38, 'order_id': 13, 'adjust_type': 2},
+    #     # 应收调整单
+    #     {'as_id': 38, 'order_id': 14, 'adjust_type': 3},
+    #     # 应付调整单
+    #     {'as_id': 47, 'order_id': 15, 'adjust_type': 3},
+    #     # # 资金调整单
+    #     # {'as_id': 38, 'order_id': 16, 'adjust_ type': 1},
+    # ]
 
     # OrderType.insert_many(order_type).execute()
 

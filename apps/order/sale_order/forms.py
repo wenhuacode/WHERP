@@ -26,6 +26,7 @@ class CreateOrderForm(Form):
     storehouse_id = IntegerField("仓库ID", validators=[DataRequired(message="请输入仓库ID")])
     employee_id = IntegerField("经手人ID", validators=[DataRequired(message="请输入经手人")])
     signed_data = DateField('订单日期', validators=[DataRequired(message='订单日期')])
+    is_push_jst = BooleanField('是否推送聚水潭', validators=[NoneOf([])])
     total_sales_amount = FloatField('产品合计金额', validators=[NumberRange(message="产品合计金额出错")])
     order_discount = FloatField('整单折扣率', validators=[NumberRange(message="整单折扣率出错")])
     order_qty = IntegerField("数量", validators=[DataRequired(message="产品数量")])

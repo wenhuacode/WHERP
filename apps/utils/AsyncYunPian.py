@@ -12,7 +12,7 @@ class AsyncYunPian:
     async def send_single_sms(self, code, mobile):
         http_client = httpclient.AsyncHTTPClient()
         url = "https://sms.yunpian.com/v2/sms/single_send.json"
-        text = "【杭州明越母婴用品有限公司】您的验证码是{}。如非本人操作，请忽略本短信".format(code)
+        text = "【WHERP】您的验证码是{}。如非本人操作，请忽略本短信".format(code)
         post_request = HTTPRequest(url=url, method="POST", body=urlencode({
             "apikey": self.api_key,
             "mobile": mobile,

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from apps.utils.round_dec import round_dec
 from apps.order.models.models import SubsidiaryLedger
-from WHERP.settings import objects
+from wherp.settings import objects
 from playhouse.shortcuts import model_to_dict
 
 

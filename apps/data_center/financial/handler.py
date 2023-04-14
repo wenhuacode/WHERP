@@ -1,6 +1,6 @@
 import json
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.utils.util_func import json_serial
 from apps.finance.accounting_subject.models import *

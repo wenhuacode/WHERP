@@ -1,5 +1,5 @@
 from peewee import *
-from WHERP.models import BaseModel
+from wherp.models import BaseModel
 
 DISABLE_STATUS = (
     ("0", "正常"),

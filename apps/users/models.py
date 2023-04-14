@@ -1,7 +1,7 @@
 from peewee import *
 from bcrypt import hashpw, gensalt
 
-from WHERP.models import BaseModel
+from wherp.models import BaseModel
 
 
 class PasswordHash(bytes):

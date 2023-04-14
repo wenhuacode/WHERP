@@ -11,8 +11,8 @@ from tornado import web
 import tornado
 import tornado.log
 
-from WHERP.urls import urlpattern
-from WHERP.settings import settings, objects
+from wherp.urls import urlpattern
+from wherp.settings import settings, objects
 
 
 def sig_handler(server, sig, frame):

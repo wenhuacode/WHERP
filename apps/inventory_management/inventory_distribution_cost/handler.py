@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.inventory_management.inventory_distribution_cost.models import *
 from apps.inventory_management.inventory_distribution_cost.forms import *

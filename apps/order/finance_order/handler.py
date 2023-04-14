@@ -1,11 +1,11 @@
 import json
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.order.models.models import OrderIndex, OrderDetail, SubsidiaryLedger
 from apps.order.finance_order.forms import FinanceOrderForms
 from apps.finance.accounting_subject.models import AccountingSubject
-from WHERP.settings import database
+from wherp.settings import database
 from playhouse.shortcuts import model_to_dict
 
 

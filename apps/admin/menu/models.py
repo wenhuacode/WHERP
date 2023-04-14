@@ -1,6 +1,6 @@
 from peewee import *
 
-from WHERP.models import BaseModel
+from wherp.models import BaseModel
 
 
 class Menu(BaseModel):

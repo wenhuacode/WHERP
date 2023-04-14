@@ -1,14 +1,13 @@
 import json
 
-from WHERP.handler import RedisHandler
-from WHERP.settings import database
+from wherp.handler import RedisHandler
+from wherp.settings import database
 from apps.utils.mxform_decorators import authenticated_async
 from apps.order.models.models import OrderIndex, OrderDetail, OrderDetailAccount
 from apps.order.inventort_order.forms import CreateInventoryOrderForm
 from apps.utils.OutInventoryCheck import OutInventoryCheck
 from apps.utils.AccountingSubjectInsert import AccountingSubjectInsert
-from apps.product.product_handler.models import Product
-from peewee import JOIN
+
 
 
 # 新建库存操作类订单
@@ -34,6 +33,7 @@ class InventoryOrderHandler(RedisHandler):
                                                           rs_storehouse=form.rs_storehouse.data,
                                                           employee_id=form.employee_id.data,
                                                           signed_data=form.signed_data.data,
+                                                          is_push_jst=form.is_push_jst.data,
                                                           order_qty=form.order_qty.data,
                                                           total_sales_amount=form.total_sales_amount.data,
                                                           order_discount=form.order_discount.data,

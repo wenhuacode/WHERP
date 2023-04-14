@@ -5,7 +5,7 @@ from datetime import datetime
 from random import choice
 import jwt
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.users.models import *
 from apps.admin.menu.models import Menu
 from apps.admin.role.models import RoleMenus, RolePagePermissions
@@ -14,7 +14,7 @@ from apps.utils.AsyncYunPian import AsyncYunPian
 from apps.utils.mxform_decorators import authenticated_async
 from apps.utils.util_func import json_serial
 from apps.utils.FindMenu import find_menu
-from WHERP.settings import database
+from wherp.settings import database
 from playhouse.shortcuts import model_to_dict
 
 
@@ -651,7 +651,7 @@ class SmsHandler(RedisHandler):
         if sms_form.validate():
             mobile = sms_form.phone.data
             code = self.generate_code()
-            yun_pian = AsyncYunPian("key")
+            yun_pian = AsyncYunPian("keys")
 
             re_json = await yun_pian.send_single_sms(code, mobile)
             if re_json["code"] != 0:

@@ -2,7 +2,7 @@ import copy
 import json
 from datetime import datetime
 
-from WHERP.handler import RedisHandler
+from wherp.handler import RedisHandler
 from apps.utils.mxform_decorators import authenticated_async
 from apps.purchase.supplier.models import *
 from apps.purchase.supplier.forms import *

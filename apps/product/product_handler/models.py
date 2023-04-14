@@ -1,5 +1,5 @@
 from peewee import *
-from WHERP.models import BaseModel
+from wherp.models import BaseModel
 from apps.inventory_management.inventory_distribution_cost.models import IrProperty
 from apps.inventory_management.inventory_distribution_cost.models import StorehouseManagement
 

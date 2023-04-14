@@ -1,7 +1,7 @@
 import json
 
-from WHERP.handler import RedisHandler
-from WHERP.settings import database
+from wherp.handler import RedisHandler
+from wherp.settings import database
 from apps.utils.mxform_decorators import authenticated_async
 from apps.order.sale_order.forms import CreateOrderForm
 from playhouse.shortcuts import model_to_dict
@@ -149,6 +149,7 @@ class OrderHandler(RedisHandler):
                                                           storehouse_id=form.storehouse_id.data,
                                                           employee_id=form.employee_id.data,
                                                           signed_data=form.signed_data.data,
+                                                          is_push_jst=form.is_push_jst.data,
                                                           order_qty=form.order_qty.data,
                                                           total_sales_amount=form.total_sales_amount.data,
                                                           order_discount=form.order_discount.data,
@@ -191,6 +192,7 @@ class OrderHandler(RedisHandler):
                     order.employee_id = form.employee_id.data
                     order.storehouse_id = form.storehouse_id.data
                     order.signed_data = form.signed_data.data
+                    order.is_push_jst = form.is_push_jst.data
                     order.order_qty = form.order_qty.data
                     order.total_sales_amount = float(form.total_sales_amount.data)
                     order.order_discount = float(form.order_discount.data)
